@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
   const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === 'true';
 
   return {
-    base: isGitHubPagesBuild ? '/scaleup.kmc.world/' : '/',
+    base: '/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
